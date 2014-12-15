@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+description = 'basic gradle build'
+group = "griffio"
+version = "0.1.0"
+
+project.ext.sourceCompatibility = 1.8
+project.ext.targetCompatibility = 1.8
+
+version = '1.0'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'com.google.guava:guava:18.0'
+    testCompile 'com.google.guava:guava-testlib:18.0'
+    testCompile 'org.testng:testng:6.8.8'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = 2.2
+}
+
