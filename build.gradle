@@ -9,8 +9,6 @@ version = "0.1.0"
 project.ext.sourceCompatibility = 1.8
 project.ext.targetCompatibility = 1.8
 
-version = '1.0'
-
 repositories {
     jcenter()
 }
@@ -24,4 +22,3 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = 2.2
 }
-
