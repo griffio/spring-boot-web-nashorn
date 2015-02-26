@@ -1,7 +1,7 @@
 gradle-project
 ==============
 
-basic gradle build template for Java 8
+basic gradle (2.3) build template for Java 8
 
 Props
 ~~~
