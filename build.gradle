@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
 
-  compile("com.google.guava:guava:$guava_version",
+  compile("com.google.guava:guava:${guava_version}",
       "com.google.code.findbugs:jsr305:${jsr305_version}",
       "org.slf4j:slf4j-api:${slf4j_api_version}",
       "ch.qos.logback:logback-classic:${logback_version}")
@@ -29,6 +29,7 @@ tasks.withType(JavaCompile) {
   sourceCompatibility = JavaVersion.VERSION_1_8
   targetCompatibility = JavaVersion.VERSION_1_8
   options.compilerArgs += ["-Xlint:all,-processing"]
+  options.encoding = "UTF-8"
 }
 
 task wrapper(type: Wrapper) {
