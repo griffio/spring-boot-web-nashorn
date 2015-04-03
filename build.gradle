@@ -1,6 +1,6 @@
 buildscript {
   repositories {
-    maven { url "http://repo.spring.io/libs-release" }
+    maven { url "https://repo.spring.io/libs-release" }
     mavenLocal()
     mavenCentral()
   }
@@ -27,19 +27,27 @@ applicationName = "app"
 repositories {
   mavenLocal()
   mavenCentral()
-  maven { url "http://repo.spring.io/libs-release" }
+  maven { url "https://repo.spring.io/libs-release" }
 }
 
 dependencies {
   compile(
       "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}",
       "org.springframework.boot:spring-boot-starter-web",
+      "org.springframework:spring-aop:4.2.0.BUILD-SNAPSHOT",
+      "org.springframework:spring-beans:4.2.0.BUILD-SNAPSHOT",
+      "org.springframework:spring-context:4.2.0.BUILD-SNAPSHOT",
+      "org.springframework:spring-core:4.2.0.BUILD-SNAPSHOT",
+      "org.springframework:spring-expression:4.2.0.BUILD-SNAPSHOT",
+      "org.springframework:spring-web:4.2.0.BUILD-SNAPSHOT",
+      "org.springframework:spring-webmvc:4.2.0.BUILD-SNAPSHOT",
+      "org.webjars:mustachejs:0.8.2",
       "com.google.guava:guava:${guava_version}")
 
   testCompile(
       "junit:junit:${junit_version}",
       "com.google.truth:truth:${truth_version}",
-      'org.springframework.boot:spring-boot-starter-test')
+      "org.springframework:spring-test:4.2.0.BUILD-SNAPSHOT")
 }
 
 task wrapper(type: Wrapper) {
