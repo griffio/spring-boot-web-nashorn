@@ -1,4 +1,8 @@
-gradle-project
+
+https://github.com/sdeleuze/spring-framework/tree/SPR-12266/
+
+4.2.0.BUILD-SNAPSHOT
+
 ==============
 
 basic gradle (2.3) build template for Java 8
