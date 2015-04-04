@@ -10,10 +10,6 @@ buildscript {
   }
 }
 
-plugins {
-  id 'java'
-}
-
 apply plugin: 'kotlin'
 apply plugin: 'spring-boot'
 
@@ -31,16 +27,19 @@ repositories {
 }
 
 dependencies {
+
+  ext.spring_version = '4.2.0.BUILD-SNAPSHOT'
+
   compile(
       "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}",
       "org.springframework.boot:spring-boot-starter-web",
-      "org.springframework:spring-aop:4.2.0.BUILD-SNAPSHOT",
-      "org.springframework:spring-beans:4.2.0.BUILD-SNAPSHOT",
-      "org.springframework:spring-context:4.2.0.BUILD-SNAPSHOT",
-      "org.springframework:spring-core:4.2.0.BUILD-SNAPSHOT",
-      "org.springframework:spring-expression:4.2.0.BUILD-SNAPSHOT",
-      "org.springframework:spring-web:4.2.0.BUILD-SNAPSHOT",
-      "org.springframework:spring-webmvc:4.2.0.BUILD-SNAPSHOT",
+      "org.springframework:spring-aop:${spring_version}",
+      "org.springframework:spring-beans:${spring_version}",
+      "org.springframework:spring-context:${spring_version}",
+      "org.springframework:spring-core:${spring_version}",
+      "org.springframework:spring-expression:${spring_version}",
+      "org.springframework:spring-web:${spring_version}",
+      "org.springframework:spring-webmvc:${spring_version}",
       "org.webjars:mustachejs:0.8.2",
       "com.google.guava:guava:${guava_version}")
 
