@@ -5,6 +5,8 @@ https://github.com/sdeleuze/spring-framework/tree/SPR-12266/
 
 ==============
 
+Kotlin
+
 basic gradle (2.3) build template for Java 8
 
 Props
