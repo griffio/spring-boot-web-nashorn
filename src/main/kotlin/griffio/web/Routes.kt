@@ -1,18 +1,18 @@
 package griffio.web
 
-import griffio.HealthCheck
+import org.springframework.stereotype.Controller
+import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
-import java.util.concurrent.atomic.AtomicLong
 
-RestController
+Controller
 public class Routes {
 
-    val counter = AtomicLong()
-
-    RequestMapping(value = array("/health"))
-    public fun greeting(RequestParam(value = "message", defaultValue = "OK") name: String): HealthCheck {
-        return HealthCheck(counter.incrementAndGet(), "$name")
+    RequestMapping(value = array("/"))
+    fun index(model: Model) : String {
+        model.addAttribute("title", "The title")
+        model.addAttribute("body", "The body")
+        return "/templates/index"
     }
+
 }
