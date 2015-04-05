@@ -23,6 +23,8 @@ SpringApplicationConfiguration(classes = array(javaClass<Application>()))
 WebAppConfiguration
 public class TestingWebApplication () {
 
+    val fixture = "<html><head><title>The title</title></head><body><p>The body</p></body></html>"
+
     var mockMvc: MockMvc by Delegates.notNull()
 
     Autowired
@@ -34,10 +36,17 @@ public class TestingWebApplication () {
     }
 
     Test
-    public fun index() {
+    public fun root() {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("<html><head><title>The title</title></head><body><p>The body</p></body></html>"))
+                .andExpect(content().string(fixture))
+    }
+
+    Test
+    public fun index() {
+        mockMvc.perform(get("/index.html"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(fixture))
     }
 
 }

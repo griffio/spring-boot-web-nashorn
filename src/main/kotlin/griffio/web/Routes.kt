@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam
 Controller
 public class Routes {
 
-    RequestMapping(value = array("/"))
+    RequestMapping(value = array("/", "index.html"))
     fun index(model: Model) : String {
         model.addAttribute("title", "The title")
         model.addAttribute("body", "The body")
