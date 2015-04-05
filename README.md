@@ -1,7 +1,9 @@
 
-https://github.com/sdeleuze/spring-framework/tree/SPR-12266/
+https://github.com/sdeleuze/spring-framework/tree/
 
 4.2.0.BUILD-SNAPSHOT
+
+Render Mustache template from Nashorn
 
 ==============
 
