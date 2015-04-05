@@ -12,7 +12,7 @@ public class Routes {
     fun index(model: Model) : String {
         model.addAttribute("title", "The title")
         model.addAttribute("body", "The body")
-        return "/templates/index"
+        return "index"
     }
 
 }
