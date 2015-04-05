@@ -9,6 +9,12 @@ Spring Boot with Kotlin
 ./gradlew run
 ~~~
 
+http://localhost:8080/index.html
+
+Rendered from
+
+https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resources/templates/index.mst
+
 ==============
 
 Kotlin
