@@ -14,6 +14,7 @@ open class WebApplication : WebMvcConfigurerAdapter() {
     override fun configureViewResolvers(registry: ViewResolverRegistry?) {
         super.configureViewResolvers(registry)
         var viewResolver : ScriptTemplateViewResolver = ScriptTemplateViewResolver()
+        ViewResolver.setPrefix("/templates/")
         viewResolver.setSuffix(".mst")
         registry?.viewResolver(viewResolver)
         registry?.scriptTemplate()
