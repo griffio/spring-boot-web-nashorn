@@ -16,11 +16,13 @@ renderJsx
 ./gradlew run
 ~~~
 
-http://localhost:8080/index.html
+Route
+
+http://localhost:8080/about.html
 
 Rendered from
 
-https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resources/templates/index.mst
+https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resources/templates/about.jsx
 
 ==============
 
