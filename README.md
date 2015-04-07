@@ -1,6 +1,8 @@
 ## Render React template from Nashorn
 
-[SPR-12266] https://github.com/sdeleuze/spring-framework/tree/SPR-12266
+[Jira SPR-12266](https://jira.spring.io/browse/SPR-12266)
+
+[Spring Framework SPR-12266](https://github.com/sdeleuze/spring-framework/tree/SPR-12266)
 
 4.2.0.BUILD-SNAPSHOT
 
