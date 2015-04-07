@@ -1,6 +1,7 @@
 package griffio.web
 
 import griffio.Application
+import org.hamcrest.core.StringContains
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -11,6 +12,7 @@ import org.springframework.test.context.web.WebAppConfiguration
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.setup.MockMvcBuilders
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
+import org.springframework.test.web.servlet.result.ContentResultMatchers
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.view
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.model
@@ -23,7 +25,9 @@ SpringApplicationConfiguration(classes = array(javaClass<Application>()))
 WebAppConfiguration
 public class TestingWebApplication () {
 
-    val fixture = "<html><head><title>The title</title></head><body><p>The body</p></body></html>"
+    val indexFixture = "Welcome"
+    val aboutFixture = "<html><head><title>The title</title></head><body><p>The body</p></body></html>"
+    val loginFixture = "<label>Username</label>"
 
     var mockMvc: MockMvc by Delegates.notNull()
 
@@ -37,16 +41,23 @@ public class TestingWebApplication () {
 
     Test
     public fun root() {
-        mockMvc.perform(get("/"))
+        mockMvc.perform(get("/about.html"))
                 .andExpect(status().isOk())
-                .andExpect(content().string(fixture))
+                .andExpect(content().string(aboutFixture))
     }
 
     Test
     public fun index() {
         mockMvc.perform(get("/index.html"))
                 .andExpect(status().isOk())
-                .andExpect(content().string(fixture))
+                .andExpect(content().string(StringContains.containsString(indexFixture)))
+    }
+
+    Test
+    public fun login() {
+        mockMvc.perform(get("/login.html"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(StringContains.containsString(loginFixture)))
     }
 
 }

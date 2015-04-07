@@ -40,8 +40,9 @@ dependencies {
       "org.springframework:spring-expression:${spring_version}",
       "org.springframework:spring-web:${spring_version}",
       "org.springframework:spring-webmvc:${spring_version}",
-      "org.webjars:mustachejs:0.8.2",
+      "org.webjars:react:${webjars_react_version}",
       "com.google.guava:guava:${guava_version}")
+
 
   testCompile(
       "junit:junit:${junit_version}",

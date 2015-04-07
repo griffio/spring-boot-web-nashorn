@@ -1,9 +1,14 @@
-## Render Mustache template from Nashorn
+## Render React template from Nashorn
 
-https://github.com/sdeleuze/spring-framework/tree/
+[SPR-12266] https://github.com/sdeleuze/spring-framework/tree/SPR-12266
+
 4.2.0.BUILD-SNAPSHOT
 
-Spring Boot with Kotlin
+Spring Boot with ReactJs templates with Nashorn and Kotlin
+
+renderJsx
+
+[Notes on Spring Boot](http://docs.spring.io/spring-boot/docs/current/reference/html/howto-spring-boot-application.html)
 
 ~~~
 ./gradlew run
