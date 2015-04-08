@@ -1,3 +1,4 @@
+// These are required by reactJs and should be provided by environment
 global = {};
 console = {};
 console.debug = print;
@@ -8,7 +9,8 @@ function render(template, model) {
     var data = {};
     for(var k in model) data[k]=model[k];
     var element = React.createElement(eval(template), data);
-    return React.renderToStaticMarkup(element);
+    // renderToStaticMarkup removes any react markup attributes (e.g data-reactid=".ho906m2sqd.1.0.0.3") from rendered markup
+    return React.renderToString(element);
 }
 
 function renderJsx(template, model) {
