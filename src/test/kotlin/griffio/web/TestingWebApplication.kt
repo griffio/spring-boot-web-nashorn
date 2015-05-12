@@ -28,6 +28,7 @@ public class TestingWebApplication () {
     val indexFixture = "Welcome"
     val aboutFixture = "<html><head><title>The title</title></head><body><p>The body</p></body></html>"
     val loginFixture = "<label>Username</label>"
+    val commentFixture = "<p>This is the first comment </p>"
 
     var mockMvc: MockMvc by Delegates.notNull()
 
@@ -58,6 +59,13 @@ public class TestingWebApplication () {
         mockMvc.perform(get("/login.html"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(StringContains.containsString(loginFixture)))
+    }
+
+    Test
+    public fun comments() {
+        mockMvc.perform(get("/comments.html"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(StringContains.containsString(commentFixture)))
     }
 
 }
