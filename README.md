@@ -6,7 +6,17 @@
 
 4.2.0.BUILD-SNAPSHOT
 
+Use jdk1.8.0_25
+
+Fails with jdk1.8.0_45
+~~~
+java.lang.ArrayIndexOutOfBoundsException: 9
+	at java.lang.invoke.MethodHandleImpl$ArrayAccessor.getElementL(MethodHandleImpl.java:130)
+~~~
+
 Spring Boot with ReactJs templates with Nashorn and Kotlin
+
+[Nashorn Extensions](https://wiki.openjdk.java.net/display/Nashorn/Nashorn+extensions) - allow map support
 
 ~~~javascript
 
@@ -15,10 +25,15 @@ console = {};
 console.debug = print;
 console.warn = print;
 console.log = print;
-
 function render(template, model) {
     var data = {};
-    for(var k in model) data[k]=model[k];
+    for (var k in model) {
+        if (model[k] instanceof Java.type("java.lang.Iterable")) {
+             data[k] = Java.from(model[k]);
+        } else {
+            data[k] = model[k];
+        }
+    }
     var element = React.createElement(eval(template), data);
     return React.renderToStaticMarkup(element);
 }
