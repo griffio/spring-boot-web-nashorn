@@ -20,8 +20,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
 import org.springframework.web.context.WebApplicationContext
 import kotlin.properties.Delegates
 
-RunWith(javaClass<SpringJUnit4ClassRunner>())
-SpringApplicationConfiguration(classes = array(javaClass<Application>()))
+RunWith(SpringJUnit4ClassRunner::class)
+SpringApplicationConfiguration(classes = arrayOf(Application::class))
 WebAppConfiguration
 public class TestingWebApplication () {
 
