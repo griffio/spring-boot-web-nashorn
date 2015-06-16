@@ -6,9 +6,10 @@
 
 4.2.0.BUILD-SNAPSHOT
 
-Use jdk1.8.0_25
+Use jdk1.8.0_25 or [jdk1.8.0_60 early access release](https://jdk8.java.net/download.html)
 
 Fails with jdk1.8.0_45
+
 ~~~
 java.lang.ArrayIndexOutOfBoundsException: 9
 	at java.lang.invoke.MethodHandleImpl$ArrayAccessor.getElementL(MethodHandleImpl.java:130)
@@ -46,6 +47,14 @@ function renderJsx(template, model) {
 ~~~
 
 [Notes on Spring Boot](http://docs.spring.io/spring-boot/docs/current/reference/html/howto-spring-boot-application.html)
+
+Test with JDK 
+
+~~~
+./gradlew test
+~~~
+
+Application
 
 ~~~
 ./gradlew run
