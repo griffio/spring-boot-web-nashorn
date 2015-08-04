@@ -28,28 +28,23 @@ repositories {
 
 dependencies {
 
-  ext.spring_version = '4.2.0.BUILD-SNAPSHOT'
+  ext.spring_version = '4.2.0.RELEASE'
 
   compile(
       "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}",
       "org.springframework.boot:spring-boot-starter-web",
-      "org.springframework:spring-aop:${spring_version}",
-      "org.springframework:spring-beans:${spring_version}",
       "org.springframework:spring-context:${spring_version}",
-      "org.springframework:spring-core:${spring_version}",
-      "org.springframework:spring-expression:${spring_version}",
       "org.springframework:spring-web:${spring_version}",
       "org.springframework:spring-webmvc:${spring_version}",
       "org.webjars:react:${webjars_react_version}",
       "com.google.guava:guava:${guava_version}")
 
-
   testCompile(
       "junit:junit:${junit_version}",
       "com.google.truth:truth:${truth_version}",
-      "org.springframework:spring-test:4.2.0.BUILD-SNAPSHOT")
+      "org.springframework:spring-test:${spring_version}")
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '2.3'
+  gradleVersion = '2.4'
 }
