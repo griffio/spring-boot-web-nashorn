@@ -1,10 +1,10 @@
 ## Render React template from Nashorn
 
+Now in 4.2.0.RELEASE
+
 [Jira SPR-12266](https://jira.spring.io/browse/SPR-12266)
 
 [Spring Framework SPR-12266](https://github.com/sdeleuze/spring-framework/tree/SPR-12266)
-
-4.2.0.BUILD-SNAPSHOT
 
 Use jdk1.8.0_25 or [jdk1.8.0_60 early access release](https://jdk8.java.net/download.html)
 
@@ -72,7 +72,7 @@ https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resource
 
 Kotlin
 
-basic gradle (2.3) build template for Java 8
+basic gradle (2.4) build template for Java 8
 
 Props
 ~~~
