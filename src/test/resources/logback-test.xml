@@ -1,7 +1,7 @@
 <configuration>
     <appender name="file" class="ch.qos.logback.core.FileAppender">
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>DEBUG</level>
+            <level>INFO</level>
         </filter>
         <file>build/test.log</file>
         <append>false</append>
@@ -12,7 +12,7 @@
     </appender>
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>DEBUG</level>
+            <level>INFO</level>
         </filter>
         <encoder>
             <Pattern>%-5p [%t]: %c{1} - %m%n</Pattern>
@@ -20,7 +20,7 @@
         </encoder>
     </appender>
 
-    <logger name="griffio" level="debug"/>
+    <logger name="griffio" level="info"/>
     <root>
         <appender-ref ref="file"/>
         <appender-ref ref="console"/>
