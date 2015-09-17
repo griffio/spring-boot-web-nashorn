@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.script.ScriptTemplateView
 import org.springframework.web.servlet.view.script.ScriptTemplateViewResolver
 import java.util.Properties
 
-Configuration
+@Configuration
 open class WebApplication : WebMvcConfigurerAdapter() {
 
     override fun configureViewResolvers(registry: ViewResolverRegistry?) {
@@ -33,18 +33,18 @@ open class WebApplication : WebMvcConfigurerAdapter() {
         super.addViewControllers(registry)
     }
 
-    Bean
+    @Bean
     open fun configureScript(): ScriptTemplateConfigurer {
         val configurer: ScriptTemplateConfigurer = ScriptTemplateConfigurer()
-        configurer.setEngineName("nashorn")
+        configurer.engineName = "nashorn"
         configurer.setScripts("/META-INF/resources/webjars/react/0.13.1/react.js",
                 			  "/META-INF/resources/webjars/react/0.13.1/JSXTransformer.js",
                               "/react-templating.js")
-        configurer.setRenderFunction("renderJsx")
+        configurer.renderFunction = "renderJsx"
         return configurer
     }
 
-    Bean
+    @Bean
     open fun createSimpleMappingExceptionResolver() : SimpleMappingExceptionResolver {
         var er : SimpleMappingExceptionResolver = SimpleMappingExceptionResolver()
         var mappings : Properties = Properties()

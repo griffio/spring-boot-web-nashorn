@@ -1,6 +1,6 @@
 ## Render React template from Nashorn
 
-Now in 4.2.0.RELEASE
+### Now in 4.2.0.RELEASE
 
 [Jira SPR-12266](https://jira.spring.io/browse/SPR-12266)
 
@@ -15,7 +15,7 @@ java.lang.ArrayIndexOutOfBoundsException: 9
 	at java.lang.invoke.MethodHandleImpl$ArrayAccessor.getElementL(MethodHandleImpl.java:130)
 ~~~
 
-Spring Boot with ReactJs templates with Nashorn and Kotlin
+### Spring Boot with ReactJs templates with Nashorn and Kotlin (0.13.1513)
 
 [Nashorn Extensions](https://wiki.openjdk.java.net/display/Nashorn/Nashorn+extensions) - allow map support
 
@@ -70,7 +70,10 @@ https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resource
 
 ==============
 
-Kotlin 0.12.613
+### Kotlin 0.13.1513 (Intellij 14.1.4 or higher)
+
+* Annotations now use @)
+* Property syntax support)
 
 basic gradle (2.5) build template for Java 8
 
@@ -78,7 +81,7 @@ Props
 ~~~
 guava_version=18.0
 junit_version=4.11
-kotlin_version=0.12.613
+kotlin_version=0.13.1513
 jsr305_version=1.3.9
 logback_version=1.1.2
 slf4j_api_version=1.7.10
