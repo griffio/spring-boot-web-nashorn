@@ -72,8 +72,9 @@ https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resource
 
 ### Kotlin 0.13.1513 (Intellij 14.1.4 or higher)
 
-* Annotations now use @)
-* Property syntax support)
+* Annotations now use @
+* Property syntax support
+* <ClassName>::class.java reference
 
 basic gradle (2.5) build template for Java 8
 
