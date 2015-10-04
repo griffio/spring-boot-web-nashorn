@@ -70,7 +70,7 @@ https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resource
 
 ==============
 
-### Kotlin 0.13.1513 (Intellij 14.1.4 or higher)
+### Kotlin 0.14.449 (Intellij 14.1.4 or higher)
 
 * Annotations now use @
 * Property syntax support
@@ -82,7 +82,7 @@ Props
 ~~~
 guava_version=18.0
 junit_version=4.11
-kotlin_version=0.13.1513
+kotlin_version=0.14.449
 jsr305_version=1.3.9
 logback_version=1.1.2
 slf4j_api_version=1.7.10
