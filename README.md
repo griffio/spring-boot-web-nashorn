@@ -15,7 +15,7 @@ java.lang.ArrayIndexOutOfBoundsException: 9
 	at java.lang.invoke.MethodHandleImpl$ArrayAccessor.getElementL(MethodHandleImpl.java:130)
 ~~~
 
-### Spring Boot with ReactJs templates with Nashorn and Kotlin (0.13.1513)
+### Spring Boot with ReactJs templates with Nashorn and Kotlin M14 (0.14.449)
 
 [Nashorn Extensions](https://wiki.openjdk.java.net/display/Nashorn/Nashorn+extensions) - allow map support
 

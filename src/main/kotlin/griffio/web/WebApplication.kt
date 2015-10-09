@@ -2,14 +2,12 @@ package griffio.web
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import org.springframework.web.servlet.ViewResolver
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver
 import org.springframework.web.servlet.view.script.ScriptTemplateConfigurer
-import org.springframework.web.servlet.view.script.ScriptTemplateView
 import org.springframework.web.servlet.view.script.ScriptTemplateViewResolver
 import java.util.Properties
 
@@ -37,8 +35,8 @@ open class WebApplication : WebMvcConfigurerAdapter() {
     open fun configureScript(): ScriptTemplateConfigurer {
         val configurer: ScriptTemplateConfigurer = ScriptTemplateConfigurer()
         configurer.engineName = "nashorn"
-        configurer.setScripts("/META-INF/resources/webjars/react/0.13.1/react.js",
-                			  "/META-INF/resources/webjars/react/0.13.1/JSXTransformer.js",
+        configurer.setScripts("/META-INF/resources/webjars/react/0.13.3/react.js",
+                			  "/META-INF/resources/webjars/react/0.13.3/JSXTransformer.js",
                               "/react-templating.js")
         configurer.renderFunction = "renderJsx"
         return configurer
