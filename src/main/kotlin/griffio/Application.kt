@@ -11,6 +11,13 @@ import org.springframework.http.HttpStatus
 @SpringBootApplication
 open public class Application {
 
+    companion object {
+
+        @JvmStatic public fun main(args: Array<String>) {
+            SpringApplication.run(Application::class.java, *args)
+        }
+    }
+
     @Bean
     open fun containerCustomizer() : EmbeddedServletContainerCustomizer {
 
@@ -21,11 +28,6 @@ open public class Application {
         }
 
     }
-
-}
-
-public fun main(args: Array<String>) {
-    SpringApplication.run(Application::class.java, *args)
 
 }
 

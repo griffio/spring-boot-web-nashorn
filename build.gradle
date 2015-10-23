@@ -17,7 +17,7 @@ group = 'griffio'
 version = '0.1-SNAPSHOT'
 description = "spring-boot-web-nashorn"
 
-mainClassName = "griffio.GriffioPackage"
+mainClassName = "griffio.Application"
 applicationName = "app"
 
 repositories {

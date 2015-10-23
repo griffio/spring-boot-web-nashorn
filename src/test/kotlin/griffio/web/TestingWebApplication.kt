@@ -34,34 +34,34 @@ public class TestingWebApplication () {
 
     @Before
     public fun setup() {
-        mockMvc = MockMvcBuilders.webAppContextSetup(applicationContext).build();
+        mockMvc = MockMvcBuilders.webAppContextSetup(applicationContext).build()
     }
 
     @Test
     public fun root() {
         mockMvc.perform(get("/about.html"))
-                .andExpect(status().isOk())
+                .andExpect(status().isOk)
                 .andExpect(content().string(aboutFixture))
     }
 
     @Test
     public fun index() {
         mockMvc.perform(get("/index.html"))
-                .andExpect(status().isOk())
+                .andExpect(status().isOk)
                 .andExpect(content().string(StringContains.containsString(indexFixture)))
     }
 
     @Test
     public fun login() {
         mockMvc.perform(get("/login.html"))
-                .andExpect(status().isOk())
+                .andExpect(status().isOk)
                 .andExpect(content().string(StringContains.containsString(loginFixture)))
     }
 
     @Test
     public fun comments() {
         mockMvc.perform(get("/comments.html"))
-                .andExpect(status().isOk())
+                .andExpect(status().isOk)
                 .andExpect(content().string(StringContains.containsString(commentFixture)))
     }
 
