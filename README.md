@@ -6,7 +6,7 @@
 
 [Spring Framework SPR-12266](https://github.com/sdeleuze/spring-framework/tree/SPR-12266)
 
-Use jdk1.8.0_25 or [jdk1.8.0_60 early access release](https://jdk8.java.net/download.html)
+Use jdk1.8.0_25 or jdk1.8.0_6x
 
 Fails with jdk1.8.0_45
 
@@ -15,7 +15,7 @@ java.lang.ArrayIndexOutOfBoundsException: 9
 	at java.lang.invoke.MethodHandleImpl$ArrayAccessor.getElementL(MethodHandleImpl.java:130)
 ~~~
 
-### Spring Boot with ReactJs templates with Nashorn and Kotlin M14 (0.14.449)
+### Spring Boot with ReactJs templates with Nashorn and Kotlin beta4 (1.0.0-beta-4583)
 
 [Nashorn Extensions](https://wiki.openjdk.java.net/display/Nashorn/Nashorn+extensions) - allow map support
 
@@ -70,7 +70,7 @@ https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resource
 
 ==============
 
-### Kotlin 0.14.449 (Intellij 14.1.4 or higher)
+### Kotlin 1.0.0-beta-4583 (Intellij 15 or higher)
 
 * Annotations now use @
 * Property syntax support
@@ -82,7 +82,7 @@ Props
 ~~~
 guava_version=18.0
 junit_version=4.11
-kotlin_version=0.14.449
+kotlin_version=1.0.0-beta-4583
 jsr305_version=1.3.9
 logback_version=1.1.2
 slf4j_api_version=1.7.10

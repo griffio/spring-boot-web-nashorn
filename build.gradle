@@ -40,6 +40,7 @@ dependencies {
       "com.google.guava:guava:${guava_version}")
 
   testCompile(
+      "org.jetbrains.kotlin:kotlin-test:${kotlin_version}",
       "junit:junit:${junit_version}",
       "com.google.truth:truth:${truth_version}",
       "org.springframework:spring-test:${spring_version}")
