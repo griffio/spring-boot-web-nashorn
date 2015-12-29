@@ -1,5 +1,7 @@
 ## Render React template from Nashorn
 
+0.13.3 uses JSX Transformer, not compatible with 0.14.x
+
 ### Now in 4.2.0.RELEASE
 
 [Jira SPR-12266](https://jira.spring.io/browse/SPR-12266)
