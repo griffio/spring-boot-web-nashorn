@@ -4,6 +4,7 @@ console = {};
 console.debug = print;
 console.warn = print;
 console.log = print;
+console.error = print;
 //https://wiki.openjdk.java.net/display/Nashorn/Nashorn+extensions - map support
 function render(template, model) {
     var data = {};
@@ -20,7 +21,7 @@ function render(template, model) {
 }
 
 function renderJsx(template, model) {
-    var jsTemplate = JSXTransformer.transform(template).code;
+    var jsTemplate = Babel.transform(template, { presets: ['react'] }).code;
     console.log(jsTemplate);
     return render(jsTemplate, model);
 }

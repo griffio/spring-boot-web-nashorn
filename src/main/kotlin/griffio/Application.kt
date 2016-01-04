@@ -12,23 +12,15 @@ import org.springframework.http.HttpStatus
 open public class Application {
 
     companion object {
-
         @JvmStatic public fun main(args: Array<String>) {
             SpringApplication.run(Application::class.java, *args)
         }
     }
 
     @Bean
-    open fun containerCustomizer() : EmbeddedServletContainerCustomizer {
-
-        return object : EmbeddedServletContainerCustomizer {
-            override fun customize(container: ConfigurableEmbeddedServletContainer?) {
-                container?.addErrorPages(ErrorPage(HttpStatus.NOT_FOUND, "/404.html"))
-            }
+    open fun containerCustomizer(): EmbeddedServletContainerCustomizer {
+        return EmbeddedServletContainerCustomizer { container ->
+            container?.addErrorPages(ErrorPage(HttpStatus.NOT_FOUND, "/404.html"))
         }
-
     }
-
 }
-
-

@@ -28,7 +28,7 @@ React.createClass({
         return (
             <html><head><title>Comments</title></head>
             <body><p>
-            <CommentList comments={this.props.comments}></CommentList>
+            <CommentList comments={this.props.comments}/>
             </p></body>
             </html>
         )

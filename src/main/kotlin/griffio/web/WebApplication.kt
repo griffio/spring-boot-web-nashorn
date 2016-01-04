@@ -35,17 +35,18 @@ open class WebApplication : WebMvcConfigurerAdapter() {
     open fun configureScript(): ScriptTemplateConfigurer {
         val configurer: ScriptTemplateConfigurer = ScriptTemplateConfigurer()
         configurer.engineName = "nashorn"
-        configurer.setScripts("/META-INF/resources/webjars/react/0.13.3/react.js",
-                			  "/META-INF/resources/webjars/react/0.13.3/JSXTransformer.js",
-                              "/react-templating.js")
+        configurer.setScripts(
+                "/META-INF/resources/webjars/react/0.14.3/react.js",
+                "/babel.min.js",
+                "/react-templating.js");
         configurer.renderFunction = "renderJsx"
         return configurer
     }
 
     @Bean
-    open fun createSimpleMappingExceptionResolver() : SimpleMappingExceptionResolver {
-        var er : SimpleMappingExceptionResolver = SimpleMappingExceptionResolver()
-        var mappings : Properties = Properties()
+    open fun createSimpleMappingExceptionResolver(): SimpleMappingExceptionResolver {
+        var er: SimpleMappingExceptionResolver = SimpleMappingExceptionResolver()
+        var mappings: Properties = Properties()
         er.setExceptionMappings(mappings)
         er.setExceptionAttribute("ex")
         er.setDefaultErrorView("error")

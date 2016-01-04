@@ -5,19 +5,19 @@
 ### Now in 4.2.0.RELEASE
 
 [Jira SPR-12266](https://jira.spring.io/browse/SPR-12266)
-
 [Spring Framework SPR-12266](https://github.com/sdeleuze/spring-framework/tree/SPR-12266)
 
-Use jdk1.8.0_25 or jdk1.8.0_6x
+Use jdk-8u72-ea or higher. https://jdk8.java.net/download.html
 
-Fails with jdk1.8.0_45
-
-~~~
-java.lang.ArrayIndexOutOfBoundsException: 9
-	at java.lang.invoke.MethodHandleImpl$ArrayAccessor.getElementL(MethodHandleImpl.java:130)
-~~~
+Early access fix for: Method code too large in Babel - https://bugs.openjdk.java.net/browse/JDK-8135190
 
 ### Spring Boot with ReactJs templates with Nashorn and Kotlin beta4 (1.0.0-beta-4583)
+
+React 0.14.x requires BabelJs environment to compile JSX.
+BabelJs requires nodejs api dependencies.
+
+However, a atandalone build of Babel for use in non-Node.js environments. https://babeljs.io/docs/usage/browser/ now removed.
+https://github.com/Daniel15/babel-standalone
 
 [Nashorn Extensions](https://wiki.openjdk.java.net/display/Nashorn/Nashorn+extensions) - allow map support
 
@@ -42,7 +42,7 @@ function render(template, model) {
 }
 
 function renderJsx(template, model) {
-    var jsTemplate = JSXTransformer.transform(template).code;
+    var jsTemplate = Babel.transform(template, { presets: ['react'] }).code;
     return render(jsTemplate, model);
 }
 
