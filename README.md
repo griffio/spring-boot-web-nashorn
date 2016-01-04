@@ -29,6 +29,8 @@ console = {};
 console.debug = print;
 console.warn = print;
 console.log = print;
+console.error = print;
+
 function render(template, model) {
     var data = {};
     for (var k in model) {
