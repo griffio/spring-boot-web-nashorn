@@ -1,6 +1,7 @@
 ## Render React template from Nashorn
 
-0.13.3 uses JSX Transformer, not compatible with 0.14.x
+0.13.3 uses JSX Transformer, not compatible with 0.14.x, need to use BabelJs.
+However, BabelJs now needs NodeJs environment, so use babel-standalone that bundles all required modules.
 
 ### Now in 4.2.0.RELEASE
 
