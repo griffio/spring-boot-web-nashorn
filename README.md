@@ -60,7 +60,7 @@ Test with JDK
 Application
 
 ~~~
-./gradlew run
+./gradlew bootRun
 ~~~
 
 Route
