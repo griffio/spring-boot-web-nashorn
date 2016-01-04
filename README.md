@@ -17,7 +17,7 @@ Early access fix for: Method code too large in Babel - https://bugs.openjdk.java
 React 0.14.x requires BabelJs environment to compile JSX.
 BabelJs requires nodejs api dependencies.
 
-However, a atandalone build of Babel for use in non-Node.js environments. https://babeljs.io/docs/usage/browser/ now removed.
+However, a stand-alone build of Babel for use in non-Node.js environments used as https://babeljs.io/docs/usage/browser/ now removed.
 https://github.com/Daniel15/babel-standalone
 
 [Nashorn Extensions](https://wiki.openjdk.java.net/display/Nashorn/Nashorn+extensions) - allow map support
