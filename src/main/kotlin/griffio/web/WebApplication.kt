@@ -36,9 +36,10 @@ open class WebApplication : WebMvcConfigurerAdapter() {
         val configurer: ScriptTemplateConfigurer = ScriptTemplateConfigurer()
         configurer.engineName = "nashorn"
         configurer.setScripts(
-                "/META-INF/resources/webjars/react/0.14.3/react.js",
+                "/META-INF/resources/webjars/react/0.14.3/react.min.js",
+                "/META-INF/resources/webjars/react/0.14.3/react-dom-server.min.js",
                 "/babel.min.js",
-                "/react-templating.js");
+                "/react-templating.js")
         configurer.renderFunction = "renderJsx"
         return configurer
     }

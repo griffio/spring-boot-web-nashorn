@@ -17,7 +17,7 @@ function render(template, model) {
     }
     var element = React.createElement(eval(template), data);
     // renderToStaticMarkup removes any react markup attributes (e.g data-reactid=".ho906m2sqd.1.0.0.3" from rendered markup
-    return React.renderToStaticMarkup(element);
+    return ReactDOMServer.renderToStaticMarkup(element);
 }
 
 function renderJsx(template, model) {
