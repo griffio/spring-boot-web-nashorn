@@ -41,7 +41,7 @@ function render(template, model) {
         }
     }
     var element = React.createElement(eval(template), data);
-    return React.renderToStaticMarkup(element);
+    return ReactDOMServer.renderToStaticMarkup(element);
 }
 
 function renderJsx(template, model) {
@@ -75,7 +75,7 @@ https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resource
 
 ==============
 
-### Kotlin 1.0.0-beta-4583 (Intellij 15 or higher)
+### Kotlin 1.0.0 (Intellij 15 or higher)
 
 * Annotations now use @
 * Property syntax support
@@ -87,7 +87,7 @@ Props
 ~~~
 guava_version=18.0
 junit_version=4.11
-kotlin_version=1.0.0-beta-4583
+kotlin_version=1.0.0
 jsr305_version=1.3.9
 logback_version=1.1.2
 slf4j_api_version=1.7.10
