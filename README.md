@@ -1,7 +1,14 @@
 ## Render React template from Nashorn
 
-0.13.3 uses JSX Transformer, not compatible with 0.14.x, need to use BabelJs.
-However, BabelJs now needs NodeJs environment, so use babel-standalone that bundles all required modules.
+This is just an experiment tracking the feasibility of using v.latest React in Nashorn.
+
+Recent Spring Developer presentation: [isomorphic-templating-with-spring-boot-nashorn-and-react](http://www.slideshare.net/SpringCentral/isomorphic-templating-with-spring-boot-nashorn-and-react)
+
+React 15.0.x
+
+0.13.x leaned on JSX Transformer to perform standalone JSX translation; this was removed in current React versions.
+A BabelJs environment is needed to compile JSX.
+However, BabelJs also needs NodeJs environment, so use a babel-standalone that bundles all required modules.
 
 ### Now in 4.2.0.RELEASE
 
@@ -12,9 +19,11 @@ Use jdk-8u72-ea or higher. https://jdk8.java.net/download.html
 
 Early access fix for: Method code too large in Babel - https://bugs.openjdk.java.net/browse/JDK-8135190
 
-### Spring Boot with ReactJs templates with Nashorn and Kotlin beta4 (1.0.0-beta-4583)
+Note:- this is also the case with Typescript https://github.com/Microsoft/TypeScript/issues/1789
 
-React 0.14.x requires BabelJs environment to compile JSX.
+### Spring Boot with ReactJs templates with Nashorn and Kotlin 1.0
+
+React 15.0.x requires BabelJs environment to compile JSX.
 BabelJs requires nodejs api dependencies.
 
 However, a stand-alone build of Babel for use in non-Node.js environments used as https://babeljs.io/docs/usage/browser/ now removed.
