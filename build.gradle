@@ -33,7 +33,7 @@ dependencies {
       "org.springframework:spring-context:${spring_version}",
       "org.springframework:spring-web:${spring_version}",
       "org.springframework:spring-webmvc:${spring_version}",
-      "org.webjars:react:${webjars_react_version}",
+      "org.webjars.bower:react:${webjars_react_version}",
       "com.google.guava:guava:${guava_version}")
 
   testCompile(

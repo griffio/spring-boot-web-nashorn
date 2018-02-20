@@ -4,7 +4,7 @@ This is just an experiment tracking the feasibility of using v.latest React in N
 
 Recent Spring Developer presentation: [isomorphic-templating-with-spring-boot-nashorn-and-react](http://www.slideshare.net/SpringCentral/isomorphic-templating-with-spring-boot-nashorn-and-react)
 
-React 15.0.x
+React 15.6.x
 
 0.13.x leaned on JSX Transformer to perform standalone JSX translation; this was removed in current React versions.
 A BabelJs environment is needed to compile JSX.
@@ -23,7 +23,7 @@ Note:- this is also the case with Typescript https://github.com/Microsoft/TypeSc
 
 ### Spring Boot with ReactJs templates with Nashorn and Kotlin 1.0.3
 
-React 15.0.x requires BabelJs environment to compile JSX.
+React 15.6.x requires BabelJs environment to compile JSX.
 BabelJs requires nodejs api dependencies.
 
 However, a stand-alone build of Babel for use in non-Node.js environments used as https://babeljs.io/docs/usage/browser/ now removed.
