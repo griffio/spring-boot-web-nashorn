@@ -22,6 +22,5 @@ function render(template, model) {
 
 function renderJsx(template, model) {
     var jsTemplate = Babel.transform(template, { presets: ['react'] }).code;
-    console.log(jsTemplate);
     return render(jsTemplate, model);
 }
