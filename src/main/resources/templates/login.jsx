@@ -1,4 +1,4 @@
-React.createClass({
+createReactClass({
     render: function() {
         return <html><head><title>{this.props.title}</title></head>
         <body><div>
