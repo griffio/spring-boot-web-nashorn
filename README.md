@@ -29,7 +29,7 @@ BabelJs requires nodejs api dependencies.
 However, a stand-alone build of Babel for use in non-Node.js environments used as https://babeljs.io/docs/usage/browser/ now removed.
 https://github.com/Daniel15/babel-standalone
 
-The package create-react-class used used as Java8 Nashorn is ECMAScript 5.x createReactClass as per https://reactjs.org/docs/react-without-es6.html
+The package create-react-class is used as Java8 Nashorn is ECMAScript 5.x createReactClass as per https://reactjs.org/docs/react-without-es6.html
 
 [Nashorn Extensions](https://wiki.openjdk.java.net/display/Nashorn/Nashorn+extensions) - allow map support
 
