@@ -41,6 +41,7 @@ open class WebApplication : WebMvcConfigurerAdapter() {
                 "/babel.min.js",
                 "/create-react-class.min.js",
                 "/react-templating.js")
+        configurer.setSharedEngine(false)
         configurer.renderFunction = "renderJsx"
         return configurer
     }
