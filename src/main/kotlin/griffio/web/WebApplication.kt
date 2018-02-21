@@ -3,7 +3,6 @@ package griffio.web
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver
@@ -16,7 +15,7 @@ open class WebApplication : WebMvcConfigurerAdapter() {
 
     override fun configureViewResolvers(registry: ViewResolverRegistry?) {
         super.configureViewResolvers(registry)
-        var viewResolver: ScriptTemplateViewResolver = ScriptTemplateViewResolver()
+        val viewResolver = ScriptTemplateViewResolver()
         viewResolver.setPrefix("/templates/")
         viewResolver.setSuffix(".jsx")
         registry?.viewResolver(viewResolver)
@@ -27,13 +26,9 @@ open class WebApplication : WebMvcConfigurerAdapter() {
         registry?.addResourceHandler("/webjars/**")?.addResourceLocations("classpath:/META-INF/resources/webjars/")
     }
 
-    override fun addViewControllers(registry: ViewControllerRegistry?) {
-        super.addViewControllers(registry)
-    }
-
     @Bean
     open fun configureScript(): ScriptTemplateConfigurer {
-        val configurer: ScriptTemplateConfigurer = ScriptTemplateConfigurer()
+        val configurer = ScriptTemplateConfigurer()
         configurer.engineName = "nashorn"
         configurer.setScripts(
                 "/META-INF/resources/webjars/react/16.1.0/react.production.min.js",
@@ -41,19 +36,18 @@ open class WebApplication : WebMvcConfigurerAdapter() {
                 "/babel.min.js",
                 "/create-react-class.min.js",
                 "/react-templating.js")
-        configurer.setSharedEngine(false)
+        configurer.isSharedEngine = false
         configurer.renderFunction = "renderJsx"
         return configurer
     }
 
     @Bean
     open fun createSimpleMappingExceptionResolver(): SimpleMappingExceptionResolver {
-        var er: SimpleMappingExceptionResolver = SimpleMappingExceptionResolver()
-        var mappings: Properties = Properties()
+        val er = SimpleMappingExceptionResolver()
+        val mappings = Properties()
         er.setExceptionMappings(mappings)
         er.setExceptionAttribute("ex")
         er.setDefaultErrorView("error")
         return er
     }
-
 }

@@ -21,7 +21,7 @@ Early access fix for: Method code too large in Babel - https://bugs.openjdk.java
 
 Note:- this is also the case with Typescript https://github.com/Microsoft/TypeScript/issues/1789
 
-### Spring Boot with ReactJs templates with Nashorn and Kotlin 1.0.3
+### Spring Boot with ReactJs templates with Nashorn and Kotlin 1.2.x
 
 React 16.1.x requires BabelJs environment to compile JSX
 BabelJs requires nodejs api dependencies.
@@ -86,13 +86,13 @@ https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resource
 
 ==============
 
-### Kotlin 1.0.0 (Intellij 15 or higher)
+### Kotlin 1.2.x
 
 * Annotations now use @
 * Property syntax support
 * <ClassName>::class.java reference
 
-basic gradle (2.5) build template for Java 8
+basic gradle (4.x) build template for Java 8
 
 Props
 ~~~

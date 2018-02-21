@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Bean
 import org.springframework.http.HttpStatus
 
 @SpringBootApplication
-open public class Application {
+open class Application {
 
     companion object {
-        @JvmStatic public fun main(args: Array<String>) {
+        @JvmStatic fun main(args: Array<String>) {
             SpringApplication.run(Application::class.java, *args)
         }
     }
