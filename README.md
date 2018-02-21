@@ -88,21 +88,6 @@ https://github.com/griffio/spring-boot-web-nashorn/blob/master/src/main/resource
 
 ### Kotlin 1.2.x
 
-* Annotations now use @
-* Property syntax support
-* <ClassName>::class.java reference
+kotlin_version=1.2.21
 
 basic gradle (4.x) build template for Java 8
-
-Props
-~~~
-guava_version=19.0
-junit_version=4.11
-kotlin_version=1.0.3
-jsr305_version=1.3.9
-logback_version=1.1.2
-slf4j_api_version=1.7.10
-spring_boot_gradle_plugin_version=1.3.3.RELEASE
-testng_version=6.8.21
-truth_version=0.28
-~~~
